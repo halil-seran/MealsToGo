@@ -8,5 +8,10 @@
                 "avoidEscape": true
             }
         ]
-    }
+    },
+    "prettier/prettier": ["error", {}, {
+        "fileInfoOptions": {
+          "withNodeModules": true
+        }
+      }]
 }
