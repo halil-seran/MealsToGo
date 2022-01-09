@@ -1,38 +1,38 @@
 import React from "react";
 import styled from "styled-components/native";
 import { Searchbar } from "react-native-paper";
-import {
-  StyleSheet,
-  Text,
-  View,
-  StatusBar,
-  Platform,
-  SafeAreaView,
-} from "react-native";
-import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
+import { FlatList } from "react-native";
 
-const SafeArea = styled(SafeAreaView)`
-  flex: 1;
-  ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`};  
-`;
-//ios da Statur bar olmadigi icin bir if check e alip ios da hata almaktan kurtardim
+import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
+import { SafeArea } from "../../../components/utility/safe-area.component";
+import { Spacer } from "../../../components/spacer/spacer.component";
+
 const SearchContainer = styled.View`
   padding: ${(props) => props.theme.space[3]};
 `;
-
-const RestaurantListContainer = styled.View`
-  flex: 1;
-  padding: ${(props) => props.theme.space[3]};
-  background-color: ${props => props.theme.colors.ui.background};
-`;
+const RestaurantList = styled(FlatList).attrs({
+  //bu sipesifik bir propu FlatList icin kullanmamiza olarak sagliyor
+  //bu sekilde FlatListin ContentCont.. propunu Resta..List de kullanabildik
+  contentContainerStyle: {
+    padding: 16,
+    backgroundColor: "lightyellow",
+  },
+  
+})``; 
 
 export const RestaurantsScreen = () => (
   <SafeArea>
     <SearchContainer>
       <Searchbar />
     </SearchContainer>
-    <RestaurantListContainer>
-      <RestaurantInfoCard />
-    </RestaurantListContainer>
+    <RestaurantList
+      data={[{ name: 1 }, { name: 2 }, { name: 3 }, { name: 4 }]}
+      renderItem={() => (
+        <Spacer position="bottom" size="large">
+          <RestaurantInfoCard />
+        </Spacer>
+      )}
+      keyExtractor={(item) => item.name}
+    />
   </SafeArea>
 );
