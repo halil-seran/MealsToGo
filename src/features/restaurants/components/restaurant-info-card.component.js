@@ -18,9 +18,7 @@ import {
   Section,
   Rating,
   SectionEnd,
-} from "./restaurant-info-card-styles";
-
-
+} from "./restaurant-info-card.styles";
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
   //restaurant is a object
@@ -35,6 +33,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     isOpenNow = true,
     rating = 4,
     isClosedTemporarily = true,
+    placeId,
   } = restaurant; //this is destructuring
 
   const ratingArray = Array.from(new Array(Math.floor(rating))); //array olusturduk //math floor 2.3 gibi de olabilmesi icin
@@ -46,8 +45,13 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
         <Text variant="label">{name}</Text>
         <Section>
           <Rating>
-            {ratingArray.map(() => (
-              <SvgXml xml={star} width={20} height={20} />
+            {ratingArray.map((_, i) => ( //ne zaman map kullansan child lara unique id uydurmak zorundasin
+              <SvgXml
+                key={`star-${placeId}-${i}`}
+                xml={star}
+                width={20}
+                height={20}
+              />
             ))}
           </Rating>
           <SectionEnd>
