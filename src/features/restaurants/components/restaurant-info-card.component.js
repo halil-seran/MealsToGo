@@ -4,6 +4,7 @@ import { StyleSheet } from "react-native";
 import { Card } from "react-native-paper";
 import { SvgXml } from "react-native-svg"; //asset lerdeki stari goruntulemek icin
 
+import { Favourite } from "../../../components/favourites/favourite.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { Text } from "../../../components/typography/text.component";
 import star from "../../../../assets/star";
@@ -40,6 +41,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
 
   return (
     <RestaurantCard elevation={5}>
+      <Favourite restaurant={restaurant} />
       <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
       <Info>
         <Text variant="label">{name}</Text>
