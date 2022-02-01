@@ -10,7 +10,7 @@
     "eject": "expo eject",
     "lint": "eslint . --ext .js"
   },
-  "dependencies": {
+  "dependencies": { 
     "@expo-google-fonts/inter": "^0.2.0",
     "@expo-google-fonts/lato": "^0.2.0",
     "@expo-google-fonts/oswald": "^0.2.0",
