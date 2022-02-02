@@ -9,7 +9,7 @@ export const RestaurantCard = styled(Card)`
 `;
 
 export const RestaurantCardCover = styled(Card.Cover)`
-  padding: ${(props) => props.theme.space[3]};
+  padding: ${(props) => props.theme.space[0]};
   background-color: ${(props) => props.theme.colors.bg.primary}; // bg yerine ui olucak
 `;
 // (Text) seklindede yazabilirdik ama default component old. icin yazmamiza gerek yok

@@ -7,7 +7,10 @@ import { Spacer } from "../spacer/spacer.component";
 import { CompactRestaurantInfo } from "../restaurant/compact-restaurant-info.component";
 
 const FavouritesWrapper = styled.View`
-  padding: 10px;
+  padding: 5px;
+  padding-top: -3px;
+  padding-bottom: -3px;
+  background-color: #bee1e6;
 `;
 
 export const FavouritesBar = ({ favourites, onNavigate }) => {
@@ -17,7 +20,7 @@ export const FavouritesBar = ({ favourites, onNavigate }) => {
   return (
     <FavouritesWrapper>
       <Spacer variant="left.large">
-        <Text variant="caption">Favourites</Text>
+        <Text variant="caption" style={{paddingLeft:8}} >Favourites</Text>
       </Spacer>
 
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>

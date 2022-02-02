@@ -18,21 +18,22 @@ const CompactWebview = styled(WebView)`
 `;
 
 const Item = styled.View`
-  padding: 10px;
+  padding: 5px;
   max-width: 120px;
   align-items: center;
 `;
 
 const isAndroid = Platform.OS === "android";
 
-export const CompactRestaurantInfo = ({ restaurant }) => {
-  const Image = isAndroid ? CompactWebview : CompactImage;
+export const CompactRestaurantInfo = ({ restaurant, isMap }) => {
+  const Image = isAndroid && isMap ? CompactWebview : CompactImage;
+
   return (
-      <Item>
-        <Image source={{ uri: restaurant.photos[0] }} />
-        <Text center variant="caption" numberOfLines={3}>
-          {restaurant.name}
-        </Text>
-      </Item>
+    <Item>
+      <Image source={{ uri: restaurant.photos[0] }} />
+      <Text center variant="caption" numberOfLines={3}>
+        {restaurant.name}
+      </Text>
+    </Item>
   );
 };

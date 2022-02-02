@@ -18,7 +18,7 @@ const RestaurantList = styled(FlatList).attrs({
   //bu sekilde FlatListin ContentCont.. propunu Resta..List de kullanabildik
   contentContainerStyle: {
     padding: 16,
-    backgroundColor: "lightyellow",
+    backgroundColor: "#e2ece9",
   },
 })``;
 
