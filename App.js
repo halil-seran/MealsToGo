@@ -18,6 +18,7 @@ import { RestaurantsContextProvider } from "./src/services/restaurants/restauran
 import { LocationContextProvider } from "./src/services/location/location.context";
 import { FavouritesContextProvider } from "./src/services/favourites/favourites.context";
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyAC8n5hNk4kS6UAPv8VVvKSi_PRW6rILXM",
   authDomain: "mealstogo-db858.firebaseapp.com",
@@ -36,17 +37,17 @@ export default function App() {
   useEffect(() => {
     setTimeout(() => {
       firebase
-        .auth()
-        .signInWithEmailAndPassword("abc@xyz.com", "test32")
-        .then((user) => {
-          setIsAuthenticated(true);
-        })
-        .catch((e) => {
-          console.log(e);
-        });
+      .auth()
+      .signInWithEmailAndPassword("abc@xyz.com", "test32")
+      .then((user) => {
+        setIsAuthenticated(true);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
     }, 2000);
   }, []);
-
+  
   const [oswaldLoaded] = useOswald({
     Oswald_500Medium,
     Oswald_300Light,
@@ -54,13 +55,13 @@ export default function App() {
   const [latoLoaded] = useLato({
     Lato_400Regular,
   });
-
+  
   if (!oswaldLoaded || !latoLoaded) {
     return null;
   }
-
+  
   if (!isAuthenticated) return null;
-
+  
   return (
     <>
       <ThemeProvider theme={theme}>
