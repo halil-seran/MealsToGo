@@ -40,7 +40,7 @@ export const AuthInput = styled(TextInput)`
 
 export const Title = styled(Text)`
   font-size: 30px;
-  color: red;
+  color: #9013FE;
 `;
 
 export const ErrorContainer = styled.View`
@@ -49,4 +49,12 @@ export const ErrorContainer = styled.View`
   align-self: center;
   margin-top: ${(props) => props.theme.space[2]};
   margin-bottom: ${(props) => props.theme.space[2]};
+`;
+
+export const AnimationWrapper = styled.View`
+  width: 57%;
+  height: 26%;
+  position: absolute;
+  top: 110px;
+  padding: ${(props) => props.theme.space[2]};
 `;
