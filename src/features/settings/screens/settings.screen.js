@@ -45,7 +45,7 @@ export const SettingsScreen = ({ navigation }) => {
         />
       </AnimationWrapper>
       <AvatarContainer>
-        <Avatar.Icon size={130} icon="human-greeting" color="black" backgroundColor="rgba(200, 150, 150, 0.5)" />
+        <Avatar.Icon size={130} icon="karate" color="black" backgroundColor="rgba(200, 150, 150, 0.5)" />
         <Spacer position="top" size="small">
           <EmailTitle variant="caption">{user.email}</EmailTitle>
         </Spacer>

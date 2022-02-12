@@ -20,6 +20,7 @@ const createScreenOptions = () => {
 const createScreenOptions2 = () => {
   return {
     header: () => null,
+    headerShown: true,
   };
 };
 

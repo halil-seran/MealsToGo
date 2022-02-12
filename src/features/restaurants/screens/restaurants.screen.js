@@ -13,14 +13,8 @@ import { RestaurantInfoCard } from "../components/restaurant-info-card.component
 import { RestaurantsContext } from "../../../services/restaurants/restaurants.context";
 import { FavouritesContext } from "../../../services/favourites/favourites.context";
 
-const RestaurantList = styled(FlatList).attrs({
-  //bu sipesifik bir propu FlatList icin kullanmamiza olarak sagliyor
-  //bu sekilde FlatListin ContentCont.. propunu Resta..List de kullanabildik
-  contentContainerStyle: {
-    padding: 16,
-    backgroundColor: "#e2ece9",
-  },
-})``;
+import { RestaurantList } from "../components/restaurant-list.styles";
+
 
 const Loading = styled(ActivityIndicator)`
   margin-left: -25px;
