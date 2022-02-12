@@ -4,7 +4,7 @@ import { colors } from "../../../infrastructure/theme/colors";
 import { Text } from "../../../components/typography/text.component";
 
 export const AccountBackground = styled.ImageBackground.attrs({
-  source: require("../../../../assets/breakfast1.png"),
+  source: require("../../../../assets/AccountBackground.png"),
 })`
   flex: 1;
   align-items: center;
@@ -40,7 +40,7 @@ export const AuthInput = styled(TextInput)`
 
 export const Title = styled(Text)`
   font-size: 30px;
-  color: #9013FE;
+  color: #EF626C;
 `;
 
 export const ErrorContainer = styled.View`

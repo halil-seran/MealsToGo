@@ -22,10 +22,10 @@ export const AccountScreen = ({ navigation }) => {
           autoPlay
           loop
           resizeMode="cover"
-          source={require("../../../../assets/watermelon.json")}
+          source={require("../../../../assets/animation.json")}
           />
       </AnimationWrapper>
-        <Title>Meals To Go</Title>
+        <Title>MEALS TO GO</Title>
       <AccountContainer>
         <AuthButton
           icon="lock"
