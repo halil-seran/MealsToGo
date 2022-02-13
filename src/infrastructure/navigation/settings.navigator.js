@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { SettingsScreen } from "../../features/settings/screens/settings.screen";
 import { FavouritesScreen } from "../../features/settings/screens/favourites.screen";
+import { CameraScreen } from "../../features/settings/screens/camera.screen";
 
 import {
   createStackNavigator,
@@ -13,13 +14,6 @@ const createScreenOptions = () => {
   return {
     cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
     headerMode: "screen",
-    headerShown: false,
-  };
-};
-
-const createScreenOptions2 = () => {
-  return {
-    header: () => null,
     headerShown: true,
   };
 };
@@ -28,11 +22,12 @@ export const SettingsNavigator = ({ route, navigation }) => {
   return (
     <SettingsStack.Navigator screenOptions={createScreenOptions}>
       <SettingsStack.Screen
-        screenOptions={createScreenOptions2}
-        name="Settings"
+        options={{ header: () => null, headerShown: false }}
+        name="Settings1"
         component={SettingsScreen}
       />
       <SettingsStack.Screen name="Favourites" component={FavouritesScreen} />
+      <SettingsStack.Screen name="Camera" component={CameraScreen} />
     </SettingsStack.Navigator>
   );
 };

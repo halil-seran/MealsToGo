@@ -38,7 +38,8 @@
     "react-native-web": "0.17.1",
     "react-native-webview": "11.15.0",
     "styled-components": "^5.3.3",
-    "lottie-react-native": "5.0.1"
+    "lottie-react-native": "5.0.1",
+    "expo-camera": "~12.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
