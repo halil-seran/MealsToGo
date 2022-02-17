@@ -14,6 +14,7 @@
     "@expo-google-fonts/inter": "^0.2.0",
     "@expo-google-fonts/lato": "^0.2.0",
     "@expo-google-fonts/oswald": "^0.2.0",
+    "@googlemaps/google-maps-services-js": "^3.3.9",
     "@react-native-async-storage/async-storage": "~1.15.0",
     "@react-native-community/eslint-config": "^3.0.1",
     "@react-navigation/bottom-tabs": "^6.0.9",
@@ -22,9 +23,11 @@
     "camelize": "^1.0.0",
     "eslint": "^7.32.0",
     "expo": "~44.0.0",
+    "expo-camera": "~12.1.2",
     "expo-font": "~10.0.4",
     "expo-status-bar": "~1.2.0",
     "firebase": "^8.2.3",
+    "lottie-react-native": "5.0.1",
     "prettier": "^2.5.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -37,9 +40,7 @@
     "react-native-svg": "12.1.1",
     "react-native-web": "0.17.1",
     "react-native-webview": "11.15.0",
-    "styled-components": "^5.3.3",
-    "lottie-react-native": "5.0.1",
-    "expo-camera": "~12.1.2"
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
