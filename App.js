@@ -33,7 +33,7 @@ export default function App() {
   const [oswaldLoaded] = useOswald({
     Oswald_500Medium,
     Oswald_300Light,
-  });
+  }); 
   const [latoLoaded] = useLato({
     Lato_400Regular,
   });
