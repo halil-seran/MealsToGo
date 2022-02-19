@@ -1,8 +1,8 @@
 import camelize from "camelize"; // npm add camelize xxx_yyy =>> xxxYyy
-import { host } from "../../utils/env";
+import { host, isMock } from "../../utils/env";
 
 export const restaurantsRequest = (location) => {
-  return fetch(`${host}/placesNearby?location=${location}`).then((res) => {
+  return fetch(`${host}/placesNearby?location=${location}&mock=${isMock}`).then((res) => {
     return res.json();
   });
 };
