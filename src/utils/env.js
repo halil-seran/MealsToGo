@@ -1,7 +1,7 @@
 import { Platform } from "react-native";
 
-const liveHost = "https://us-central1-mealstogo-db858.cloudfunctions.net";
-const localHost = "http://localhost:5001/mealstogo-db858/us-central1";
+const liveHost = "https://us-central1-mealstogo-db858.cloudfunctions.net"; 
+const localHost = "http://localhost:5001/mealstogo-db858/us-central1"; 
 //androıd de http default olarak calısmaz https calısır
 //bu yuzden local host dan data getıremıyoruz
 //local fırebase functıon ıse https de calısmıyor
